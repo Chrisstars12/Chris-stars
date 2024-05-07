@@ -3,7 +3,7 @@ const axios = require('axios');
 const Prefixes = [
   'AI',
   'ai',
-  'phonkgpt',
+  'megan',
   'Ai',
 ];
 
@@ -11,7 +11,7 @@ module.exports = {
   config: {
     name: "ai",
     version: 1.0,
-    author: "Aryan",
+    author: "fatkey",
     longDescription: "chatGptAI",
     category: "ai",
     guide: {
@@ -28,16 +28,16 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
    if (!prompt) {
-        await message.reply("📝 𝗣𝗵𝗼𝗻𝗸𝗚𝗣𝗧:\n\nHello! How can I assist you today.");
+        await message.reply("chris-stars\n━━━━━━━━━━━━━━\n\nHello! How can I assist you today.⚪");
         return;
       }
 
 
-      const response = await axios.get(`https://aryanapis.replit.app/gpt?prompt=hello${encodeURIComponent(prompt)}`);
+      const response = await axios.get(`https://sandipbaruwal.onrender.com/gpt?prompt=hello${encodeURIComponent(prompt)}`);
       const answer = response.data.answer;
 
  
-    await message.reply(`📝 𝗣𝗵𝗼𝗻𝗸𝗚𝗣𝗧:\n\n${answer}`);
+    await message.reply(`🧑🏻‍💻chris-stars:\n━━━━━━━━━━━━━━\n${answer}\n━━━━━━━━━━━━━━\n🧑🏻‍💻chris-stars🧑🏻‍💻`);
 
     } catch (error) {
       console.error("Error:", error.message);
